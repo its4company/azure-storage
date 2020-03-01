@@ -4,6 +4,6 @@
     "outDir": "./schematics"
   },
   "extends": "./tsconfig.json",
-  "include": ["schematics/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts", "./schematics/install/files/**"]
+  "include": [],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

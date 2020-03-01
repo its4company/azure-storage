@@ -8,9 +8,8 @@
     "test": "jest",
     "precommit": "lint-staged",
     "prettier": "prettier src/**/*.ts --write && git status",
-    "build": "npm run build:lib && npm run build:schematics && npm test",
+    "build": "npm run build:lib && npm test",
     "build:lib": "tsc -p tsconfig.json",
-    "build:schematics": "tsc -p tsconfig.schematics.json",
     "prepublish:npm": "npm run build",
     "publish:npm": "npm publish --access public",
     "prepublish:next": "npm run build",
@@ -39,13 +38,10 @@
     "typescript": "3.6.4"
   },
   "dependencies": {
-    "@angular-devkit/schematics": "9.0.4",
-    "@schematics/angular": "9.0.4",
     "@angular/cdk": "9.1.0",
     "@azure/storage-blob": "10.5.0"
   },
   "main": "./dist/index.js",
-  "schematics": "./schematics/collection.json",
   "lint-staged": {
     "*.ts": [
       "prettier --write",
